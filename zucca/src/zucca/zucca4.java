@@ -31,7 +31,8 @@ public class zucca4 {
 		System.out.printf("%s 점수 : %.2f\n", name[4], (double)score[4]);
 		
 		double ave = (double)(score[0] + score[1] + score[2] + score[3] + score[4]) / 5;
-		System.out.printf("---------------------\n당 신 의 평 점: \t%.2f", ave);
+		System.out.printf("---------------------\n당 신 의 평 점: \t%.2f\n", ave);
+		System.out.println("평점 80점 미만 시 학사과에 문의하세요.");
 		
 		scanner.close();
 		
