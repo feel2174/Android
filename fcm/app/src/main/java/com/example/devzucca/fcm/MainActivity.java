@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,7 +26,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-
+    private WebView mWebView;
+    private WebSettings mWebSettings;
     private EditText etEmail;
 
     // 페이스북 콜백 매니저
@@ -68,8 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        LoginManager.getInstance().registerCallback(callbackManager,
-                new FacebookCallback<LoginResult>() {
+        LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         // App code
@@ -85,10 +88,6 @@ public class MainActivity extends AppCompatActivity {
                         // App code
                     }
                 });
-
-
-
-
 
 
         ImageButton imageButton1 = (ImageButton) findViewById(R.id.imageButton);
@@ -109,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         Button button2 = (Button) findViewById(R.id.button2);
-        button1.setOnClickListener(new View.OnClickListener() {
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/events/329395127783194/"));
@@ -128,14 +127,12 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/events/1872814239512367/"));
+                Intent intent = new Intent(MainActivity.this, Webview.class);
                 startActivity(intent);
+
+
             }
         });
-
-
-
-
     }
 
 
