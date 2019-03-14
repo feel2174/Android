@@ -25,7 +25,7 @@ public class Webview extends AppCompatActivity {
         mWebView.setWebViewClient(new WebViewClient());
         mWebSettings = mWebView.getSettings();
         mWebSettings.setJavaScriptEnabled(true);
-        mWebView.loadUrl("https://www.facebook.com/events/1872814239512367/");
+        mWebView.loadUrl("https://www.tickettailor.com/events/youngbros/239147");
 
 
 
