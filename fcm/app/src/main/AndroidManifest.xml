@@ -11,11 +11,16 @@
         android:roundIcon="@drawable/young1"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
         <activity android:name=".Main3Activity"></activity>
         <activity
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
+
+        <activity android:name=".Webview"></activity>
+        <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,17 +40,21 @@
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
+
             </intent-filter>
         </service>
         <service android:name=".MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
+
         </service>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
+
             android:value="@string/facebook_app_id" />
+
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -63,6 +72,7 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

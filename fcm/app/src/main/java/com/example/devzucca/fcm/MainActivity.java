@@ -1,5 +1,6 @@
 package com.example.devzucca.fcm;
 
+
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -15,6 +16,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -29,10 +32,13 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.google.firebase.auth.FirebaseAuth;
 
+
+
 public class MainActivity extends AppCompatActivity {
     private WebView mWebView;
     private WebSettings mWebSettings;
     private EditText etEmail;
+
 
     private Button button1;
     private Button button2;
@@ -53,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-//-----------------------------------------------------------------------------------
-
         callbackManager = CallbackManager.Factory.create();
 
         AccessToken accessToken = AccessToken.getCurrentAccessToken();
@@ -64,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         LoginButton loginButton = (LoginButton) findViewById(R.id.login_button);
         loginButton.setReadPermissions("email");
+
 
 
         // Callback registration
@@ -81,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onError(FacebookException exception) {
 
+
             }
         });
 
@@ -88,18 +94,24 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
                         Toast.makeText(getApplicationContext(), "로그인을 성공했습니다.", Toast.LENGTH_LONG).show();
+
                     }
 
                     @Override
                     public void onCancel() {
+
                         Toast.makeText(getApplicationContext(), "로그인에 실패했습니다.", Toast.LENGTH_LONG).show();
+
                     }
 
                     @Override
                     public void onError(FacebookException exception) {
+
                         Toast.makeText(getApplicationContext(), "로그인중 오류가 발생했습니다.", Toast.LENGTH_LONG).show();
+
                     }
                 });
+
 
 
         ImageButton imageButton1 = (ImageButton) findViewById(R.id.imageButton);
@@ -110,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
 
         button1 = (Button) findViewById(R.id.button);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +170,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, Main3Activity.class);
+
                 startActivity(intent);
             }
         });
@@ -177,8 +191,15 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
     }
 
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+}
 

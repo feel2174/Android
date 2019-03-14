@@ -5,6 +5,7 @@
 
     <string name="default_notification_channel_name" translatable="true">Test</string>
 
+
     <string name="facebook_app_id">260875208134841</string>
     <string name="fb_login_protocol_scheme">fb260875208134841</string>
     <string name="title_activity_webview2">Webview2</string>
@@ -15,5 +16,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
 
 </resources>
