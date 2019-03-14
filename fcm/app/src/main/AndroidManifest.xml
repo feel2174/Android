@@ -17,6 +17,13 @@
             android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
 
         <activity android:name=".Webview"></activity>
         <activity android:name=".MainActivity">
@@ -34,8 +41,7 @@
             android:label="@string/title_activity_webview2"
             android:theme="@style/NoActionBar" />
         <activity android:name=".Main2Activity" />
-        <activity android:name=".Webview" />
-        <activity android:name=".MainActivity" />
+
 
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
