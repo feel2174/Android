@@ -4,11 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.devzucca.kpopevent.Webview2">
-    
-    <WebView
+    tools:context="com.example.devzucca.kpopevent.Main4Activity">
+
+    <fragment
+        android:id="@+id/map"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/webview"></WebView>
+        class="com.google.android.gms.maps.MapFragment"/>
 
 </LinearLayout>

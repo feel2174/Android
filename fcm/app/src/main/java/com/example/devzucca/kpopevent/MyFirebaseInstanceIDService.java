@@ -1,4 +1,4 @@
-package com.example.devzucca.fcm;
+package com.example.devzucca.kpopevent;
 
 import android.util.Log;
 

@@ -11,10 +11,15 @@
         android:roundIcon="@drawable/young1"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name="com.example.devzucca.kpopevent.Main4Activity"></activity>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDedGbvXJ1dlwcZTEhNbFVrNV4dfBoAEeQ" />
 
-        <activity android:name=".Main3Activity"></activity>
+        <activity android:name="com.example.devzucca.kpopevent.Main3Activity" />
         <activity
-            android:name=".SplashActivity"
+            android:name="com.example.devzucca.kpopevent.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -22,45 +27,37 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-        <activity android:name=".Webview"></activity>
-        <activity android:name=".MainActivity">
-
+        <activity android:name="com.example.devzucca.kpopevent.Webview" />
+        <activity android:name="com.example.devzucca.kpopevent.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Webview4" />
-        <activity android:name=".Webview3" />
+        <activity android:name="com.example.devzucca.kpopevent.Webview4" />
+        <activity android:name="com.example.devzucca.kpopevent.Webview3" />
         <activity
-            android:name=".Webview2"
+            android:name="com.example.devzucca.kpopevent.Webview2"
             android:label="@string/title_activity_webview2"
             android:theme="@style/NoActionBar" />
-        <activity android:name=".Main2Activity" />
+        <activity android:name="com.example.devzucca.kpopevent.Main2Activity" />
 
-
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="com.example.devzucca.kpopevent.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
-
             </intent-filter>
         </service>
-        <service android:name=".MyFirebaseInstanceIDService">
+        <service android:name="com.example.devzucca.kpopevent.MyFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
-
         </service>
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
-
             android:value="@string/facebook_app_id" />
-
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -78,7 +75,6 @@
                 <data android:scheme="@string/fb_login_protocol_scheme" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
