@@ -1,4 +1,4 @@
-package com.example.devzucca.fcm;
+package com.example.devzucca.kpopevent;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -11,6 +11,7 @@ import android.os.Build;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
+import com.example.devzucca.fcm.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 

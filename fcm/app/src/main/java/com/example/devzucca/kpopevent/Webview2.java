@@ -1,4 +1,4 @@
-package com.example.devzucca.fcm;
+package com.example.devzucca.kpopevent;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import com.example.devzucca.fcm.R;
 
 public class Webview2 extends AppCompatActivity {
 

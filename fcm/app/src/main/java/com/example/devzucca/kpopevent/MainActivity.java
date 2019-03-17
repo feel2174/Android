@@ -1,19 +1,11 @@
-package com.example.devzucca.fcm;
+package com.example.devzucca.kpopevent;
 
 
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.GravityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
@@ -23,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.devzucca.fcm.R;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
